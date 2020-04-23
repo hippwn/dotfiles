@@ -14,11 +14,9 @@ log_succ() { printf "${GREEN}${BOLD}[*]${NORMAL} $1\n"; }
 # paths definitions
 wd=$(basename $(readlink -f $0))
 dirs=(
-    # Desktop environment
-    [".config/i3"]
+    ".config/awesome"
     ".config/kitty"
-    ".config/compton"
-    ".config/polybar"
+    ".config/picom"
     ".config/gtk-3.0"
     ".Xresources"
     # Shell
@@ -43,7 +41,7 @@ A simple dotfiles manager.
 
 Available commands:
     ${BOLD}deploy${NORMAL}          Deploy the dotfiles
-    ${BOLD}stop${NORMAL}            Restore the configuration before deployment
+    ${BOLD}restore${NORMAL}         Restore the configuration before deployment
     ${BOLD}help${NORMAL}            Print this message
 EOF
 )
@@ -60,7 +58,7 @@ deploy() {
 }
 
 restore() {
-
+    
 }
 
 main() {
